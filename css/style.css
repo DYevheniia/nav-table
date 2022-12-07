@@ -117,6 +117,7 @@ table {
     background: transparent;
 }
 
+
 .sub-menu-2_2::before{
     content: '';
     position: absolute;
