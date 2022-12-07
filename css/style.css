@@ -95,12 +95,42 @@ table {
     border-left: 1px solid #3f4852;
 }
 
+.sub-menu{
+    top: calc(100% + 5px);
+}
+
+.sub-menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    width: 210px;
+    height: 5px;
+    background: transparent;
+}
+
+.sub-menu-2_1::before{
+    content: '';
+    position: absolute;
+    left: -5px;
+    width: 5px;
+    height: 100%;
+    background: transparent;
+}
+
+.sub-menu-2_2::before{
+    content: '';
+    position: absolute;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: transparent;
+}
+
 
 .sub-menu-1,.sub-menu-2,
 .sub-menu-3,.sub-menu-5{
     position: absolute;
     display: none;
-    top: 46.4px;
     width: 210px;
     background: #d2d4d5;
     border-radius: 3px;
@@ -127,17 +157,16 @@ table {
 .sub-menu-2_1{
     position: absolute;
     display: none;
-    top: 46.4px;
-    left: 100%;
+    top: 0;
+    left: calc(100% + 5px);
     border-radius: 3px;
-    margin-left: 4px;
     background: #d2d4d5;
     z-index: 1;
 }
 
-.sub-menu-2_1 a,
-.menu-3-between>a,
-.sub-menu-2 a,
+.sub-menu-2_1 li,
+.menu-3-between>li,
+.sub-menu-2 li,
 .menu-1>li,
 .menu-2>li,
 .menu-3-between>li{
@@ -159,11 +188,10 @@ table {
 .sub-menu-2_2{
     position: absolute;
     display: none;
-    right: 100%;
-    top: 75%;
+    right: calc(100% + 5px);
+    top: 0;
     background: #d2d4d5;
     border-radius: 3px;
-    margin-right: 4px;
 }
 
 .sub-menu-1>li:hover>a,
